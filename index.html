@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Letter For Dear Hayat</title>
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background-color: #f5f5f5;
+      color: #2c3e50;
+      margin: 0;
+      padding: 20px;
+      background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .sealed-letter {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, #e8b4b8 0%, #d49ba0 100%);
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2em;
+      color: #fff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      text-align: center;
+      user-select: none;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+      padding: 10px;
+      line-height: 1.3;
+    }
+    .sealed-letter:hover {
+      transform: scale(1.1);
+    }
+    .sealed-letter::before {
+      content: '💌';
+      font-size: 2em;
+      display: block;
+      margin-bottom: 5px;
+    }
+    .swiper-container {
+      max-width: 800px;
+      width: 100%;
+      border: 2px solid #d49ba0;
+      border-radius: 5px;
+      background-color: #faf8f5;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      transform: scale(0.1) rotate(45deg);
+      opacity: 0;
+      transition: all 1s ease-in-out;
+      display: none;
+      position: relative;
+    }
+    .swiper-container.open {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+      display: block;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 35px;
+      height: 35px;
+      background-color: #d49ba0;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.2em;
+      cursor: pointer;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .close-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .swiper-slide {
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 30px;
+      box-sizing: border-box;
+      text-align: center;
+      min-height: 80vh;
+    }
+
+    h1, h2 {
+      color: #8b5a5e;
+      margin-bottom: 15px;
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      border-bottom: 1px solid #e8b4b8;
+      padding-bottom: 10px;
+    }
+
+    .letter-page {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 30px 25px;
+      border: 1px solid #e8d4d6;
+      background-color: #faf8f5;
+      font-size: 1.1em;
+      line-height: 1.8em;
+      white-space: pre-line;
+      border-radius: 3px;
+      box-sizing: border-box;
+      color: #333;
+      text-align: left;
+      user-select: text;
+    }
+
+    .swiper-pagination {
+      bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sealed-letter" id="sealedLetter">
+    Tap to Read<br />My Letter
+  </div>
+  <div class="swiper-container" id="swiperContainer">
+    <button class="close-btn" id="closeBtn">✕</button>
+    
+    <div class="swiper-wrapper">
+      <!-- Page 1 -->
+      <div class="swiper-slide">
+        <h1>A Letter For Dear Hayat</h1>
+        <p style="font-style: italic; color: #888;">*(Something I needed to tell you...)*</p>
+        <h2>Page 1</h2>
+        <div class="letter-page">
+I've been thinking about this for a while now,
+and I think it's time to say bye.
+
+You're not just any friend to me — 
+you're a great person. 💕
+        </div>
+      </div>
+
+      <!-- Page 2: The Journey (EMPTY) -->
+      <div class="swiper-slide">
+        <h2>Page 2: The Journey</h2>
+        <p style="font-style: italic; color: #888; margin-top: 50px;">*(Sometimes words aren't needed...)*</p>
+      </div>
+
+      <!-- Page 3 -->
+      <div class="swiper-slide">
+        <h2>Page 3: The Truth</h2>
+        <div class="letter-page">
+There's something I need to tell you...
+
+I'm moving away. 😢
+
+I know, I know — it's sudden.
+And honestly, telling you is the hardest part.
+
+But I wanted you to hear it from me,
+Not through a text or a status.
+
+You're the best friend I've ever had,
+And leaving you behind is breaking my heart.
+
+But life happens, right?
+We grow. We change. We move.
+
+What we have? It'll survive. I believe that. 💪
+        </div>
+      </div>
+
+      <!-- Page 4: Thank You -->
+      <div class="swiper-slide">
+        <h2>Page 4: Thank You</h2>
+        <p style="font-style: italic; color: #888;">"For all the memories..."</p>
+        <div class="letter-page">
+Thank you...
+
+For being my temporary amazing friend.
+I'm glad for listening to your story.
+For thinking highly of me.
+
+For those late night talks,
+For trusting me with your problems,
+For every meme you sent that made me laugh,
+For every memory we've made together.
+
+I don't know what I did to deserve a friend like you,
+But I'm so glad that we met even for a little while. 🙏
+        </div>
+      </div>
+
+      <!-- Page 5 (UPDATED) -->
+      <div class="swiper-slide">
+        <h2>Page 5: Goodbye</h2>
+        <div class="letter-page">
+This isn't forever  
+   but a farewell, okay?
+
+But before I go,
+I wanted you to know...
+
+You're amazing, kind and a little senseable😅.
+But these are the personality of your online — 
+not sure about real life.
+Still I believe you're going to do great.
+
+Don't forget who you are, just believe
+in yourself but never become that 
+so called fake feminist type.
+Properly it will be a matter of time 
+for you to forget me. 🥹
+
+Keep being the incredible person you are.
+Keep shining, glowing. 🌟
+
+I hope you have good things
+ ahead, butki😉.
+        </div>
+        <p style="margin-top: 20px; font-style: italic; color: #888;">*(The End)*</p>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const sealedLetter = document.getElementById('sealedLetter');
+    const swiperContainer = document.getElementById('swiperContainer');
+    const closeBtn = document.getElementById('closeBtn');
+
+    let swiper;
+    
+    sealedLetter.addEventListener('click', () => {
+      swiperContainer.classList.add('open');
+      sealedLetter.style.display = 'none';
+
+      swiper = new Swiper('.swiper-container', {
+        direction: 'horizontal',
+        rtl: true,
+        loop: false,
+        pagination: { el: '.swiper-pagination', clickable: true },
+        spaceBetween: 10,
+        slidesPerView: 1,
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      swiperContainer.classList.remove('open');
+      sealedLetter.style.display = 'flex';
+      if (swiper) {
+        swiper.destroy();
+        swiper = null;
+      }
+    });
+  </script>
+</body>
+</html>
